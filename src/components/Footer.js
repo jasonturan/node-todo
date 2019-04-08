@@ -1,20 +1,26 @@
-import React from 'react'
-import FilterLink from '../containers/FilterLink'
-import { VisibilityFilters } from '../actions'
+import React from 'react';
+import {VisibilityFilters} from '../actions';
+import Link from './Link';
 
-const Footer = () => (
+const Footer = ({visibilityFilter}) => (
   <div>
     <span>Show: </span>
-    <FilterLink filter={VisibilityFilters.SHOW_ALL}>
-      All
-    </FilterLink>
-    <FilterLink filter={VisibilityFilters.SHOW_ACTIVE}>
-      Active
-    </FilterLink>
-    <FilterLink filter={VisibilityFilters.SHOW_COMPLETED}>
-      Completed
-    </FilterLink>
+    <Link
+      visibilityFilter={visibilityFilter}
+      filter={VisibilityFilters.SHOW_ALL}
+      displayText="All"
+    />
+    <Link
+      visibilityFilter={visibilityFilter}
+      filter={VisibilityFilters.SHOW_ACTIVE}
+      displayText="Active"
+    />
+    <Link
+      visibilityFilter={visibilityFilter}
+      filter={VisibilityFilters.SHOW_COMPLETED}
+      displayText="Completed"
+    />
   </div>
-)
+);
 
-export default Footer
+export default Footer;
