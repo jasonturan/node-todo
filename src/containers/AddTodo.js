@@ -5,6 +5,8 @@ import { addTodo } from '../actions'
 const AddTodo = ({ dispatch }) => {
   let input;
   debugger;
+  var x = 5;
+  x =6;
   return (
     <div>
       <form onSubmit={e => {

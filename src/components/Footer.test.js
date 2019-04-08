@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import Footer from './Footer';
 import { mount, shallow, render } from 'enzyme'
 import configureStore from 'redux-mock-store';
 import { configure } from 'enzyme';
@@ -13,10 +13,11 @@ configure({ adapter: new Adapter() });
 it('renders without crashing', () => {
     const state = {};
     const store = mockStore(state);
-    const wrapper = shallow(
+    const wrapper = mount(
         <Provider store={store}>
-            <App />
+            <Footer />
         </Provider>
     );
     console.log(wrapper.debug());
 });
+
