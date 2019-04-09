@@ -2,15 +2,15 @@ import React from 'react';
 import {Dispatch} from '../CoreStore.js';
 import {addTodo, setCreateTodoText} from '../actions';
 
-const AddTodo = ({createTodo}) => (
+const TodoForm = ({todoForm}) => (
   <div>
     <input
-      value={createTodo.text}
+      value={todoForm.text}
       onChange={event => Dispatch(setCreateTodoText(event.target.value))}
     />
-    <button type="submit" onClick={() => Dispatch(addTodo(createTodo))}>
+    <button type="submit" onClick={() => Dispatch(addTodo(todoForm))}>
       Add Todo
     </button>
   </div>
 );
-export default AddTodo;
+export default TodoForm;

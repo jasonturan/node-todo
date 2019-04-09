@@ -1,13 +1,13 @@
 import React from 'react';
 import Footer from './Footer';
-import AddTodo from './AddTodo';
 import TodoList from './TodoList';
+import TodoForm from './TodoForm'
 
 const App = state => (
   <div>
-    {/*{JSON.stringify(state)}*/}
+    {JSON.stringify(state)}
     <TodoList todos={state.todos} visibilityFilter={state.visibilityFilter} />
-    <AddTodo createTodo={state.createTodo} />
+    <TodoForm todoForm={state.todoForm} />
     <Footer visibilityFilter={state.visibilityFilter} />
   </div>
 );

@@ -10,9 +10,9 @@ const visibilityFilters = {
   SHOW_ACTIVE: 'SHOW_ACTIVE'
 };
 
-export const addTodo = createTodo => ({
+export const addTodo = todoForm => ({
   type: actionTypes.ADD_TODO,
-  createTodo
+  todoForm
 });
 
 export const setVisibilityFilter = filter => ({

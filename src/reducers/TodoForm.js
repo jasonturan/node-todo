@@ -1,7 +1,8 @@
 import {ActionTypes} from '../actions';
 import {evolve, assoc, inc} from 'ramda';
+import {createTodoForm} from '../structFactories/index';
 
-const createTodo = (state = {text: '', count: 0}, action) => {
+const todoForm = (state = createTodoForm(), action) => {
   if (ActionTypes.CREATE_TODO_SET_NAME === action.type) {
     return assoc('text', action.newText, state);
   }
@@ -11,4 +12,4 @@ const createTodo = (state = {text: '', count: 0}, action) => {
   return state;
 };
 
-export default createTodo;
+export default todoForm;
