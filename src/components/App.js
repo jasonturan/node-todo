@@ -5,7 +5,7 @@ import TodoList from './TodoList';
 
 const App = state => (
   <div>
-    {JSON.stringify(state)}
+    {/*{JSON.stringify(state)}*/}
     <TodoList todos={state.todos} visibilityFilter={state.visibilityFilter} />
     <AddTodo createTodo={state.createTodo} />
     <Footer visibilityFilter={state.visibilityFilter} />
