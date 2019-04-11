@@ -14,12 +14,12 @@ it('renders without crashing', () => {
 
 it('contains a list item', () => {
   const wrapper = shallow(<Todo todo={createTodo(0, '')} />);
-  expect(wrapper.find('li')).toHaveLength(1);
+  const x = expect(wrapper.find('input')).toHaveLength(1);
 });
 
 it('dispatches a toggle todo event when clicked', () => {
   const wrapper = shallow(<Todo todo={createTodo('foo', 0)} />);
-  wrapper.find('li').simulate('click');
+  wrapper.simulate('click');
   expect(Dispatch).toHaveBeenCalledTimes(1);
   const expectedEvents = getDispatchedEventsByName(ActionTypes.TOGGLE_TODO);
   expect(expectedEvents).not.toBeNull();

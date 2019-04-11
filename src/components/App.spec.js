@@ -7,16 +7,15 @@ import TodoFilters from './TodoFilters.js';
 import {createRootState} from '../structFactories';
 
 const {expect} = global;
-
-const createApp = () => (shallow(<App { root= createRootState()} />));
+const createApp = () => shallow(App(createRootState()));
 
 it('renders without crashing', () => {
-  createApp();
+    createApp();
 });
 
 it('renders a todolist, addtodo, and footer', () => {
   const wrapper = createApp();
-  expect(wrapper.contains(<TodoList />)).toEqual(true);
-  expect(wrapper.contains(<TodoForm />)).toEqual(true);
-  expect(wrapper.contains(<TodoFilters />)).toEqual(true);
+  expect(wrapper.find('TodoList')).toHaveLength(1);
+  expect(wrapper.find('TodoForm')).toHaveLength(1);
+  expect(wrapper.find('TodoFilters')).toHaveLength(1);
 });
