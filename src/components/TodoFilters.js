@@ -1,21 +1,19 @@
 import React from 'react';
 import {VisibilityFilters} from '../actions';
-import Link from './Link';
-
-const Footer = ({visibilityFilter}) => (
+import VisibilityFilter from './VisibilityFilter';
+const TodoFilters = ({visibilityFilter}) => (
   <div>
-    <span>Show: </span>
-    <Link
+    <VisibilityFilter
       visibilityFilter={visibilityFilter}
       filter={VisibilityFilters.SHOW_ALL}
       displayText="All"
     />
-    <Link
+    <VisibilityFilter
       visibilityFilter={visibilityFilter}
       filter={VisibilityFilters.SHOW_ACTIVE}
       displayText="Active"
     />
-    <Link
+    <VisibilityFilter
       visibilityFilter={visibilityFilter}
       filter={VisibilityFilters.SHOW_COMPLETED}
       displayText="Completed"
@@ -23,4 +21,4 @@ const Footer = ({visibilityFilter}) => (
   </div>
 );
 
-export default Footer;
+export default TodoFilters;

@@ -1,0 +1,10 @@
+.todo .completed {
+    text-decoration:line-through;
+}
+.todo .active {
+    text-decoration:none;
+}
+
+.todoForm .is-invalid {
+    color: #dc3545;
+}

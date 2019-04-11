@@ -1,16 +1,16 @@
 import React from 'react';
 import {Dispatch} from '../CoreStore.js';
 import {setVisibilityFilter} from '../actions';
+import {Button} from 'react-bootstrap';
 
-const Link = ({visibilityFilter, filter, displayText}) => (
-  <button
+const VisibilityFilter = ({visibilityFilter, filter, displayText}) => (
+  <Button
+    className="mr-2"
+    variant="primary"
     onClick={() => Dispatch(setVisibilityFilter(filter))}
     disabled={visibilityFilter === filter}
-    style={{
-      marginLeft: '4px'
-    }}
   >
     {displayText}
-  </button>
+  </Button>
 );
-export default Link;
+export default VisibilityFilter;

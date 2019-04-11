@@ -1,10 +1,13 @@
 import {ActionTypes} from '../actions';
-import {map, assoc, append} from 'ramda';
+import {identity, map, assoc, append} from 'ramda';
 import {createTodo} from '../structFactories';
+import {TodoFormIsValid} from './TodoForm';
 
 const actionHandlers = {
   [ActionTypes.ADD_TODO]: action =>
-    append(createTodo(action.todoForm.count, action.todoForm.text)),
+    TodoFormIsValid(action.todoForm)
+      ? append(createTodo(action.todoForm.count, action.todoForm.text))
+      : identity,
   [ActionTypes.TOGGLE_TODO]: action =>
     map(todo =>
       todo.id === action.todo.id
