@@ -1,9 +1,11 @@
 import {combineReducers} from 'redux';
-import todos from './Todos';
+import TodoList from './TodoList';
 import {TodoForm} from './TodoForm.js';
 import visibilityFilter from './VisibilityFilter';
+import {reducer as toastrReducer} from 'react-redux-toastr';
 export default combineReducers({
-  todos,
+  todoList: TodoList,
   todoForm: TodoForm,
-  visibilityFilter
+  visibilityFilter,
+  toastr: toastrReducer
 });

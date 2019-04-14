@@ -24,7 +24,7 @@ const Todo = ({todo}) => (
           : 'form-check-label active'
       }
     >
-      {todo.text}
+      {todo.title}
     </label>
   </ListGroup.Item>
 );
