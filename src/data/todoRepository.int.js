@@ -1,13 +1,10 @@
 const {GetAllTodos, CreateOrUpdateTodos} = require('./todoRepository');
 const {expect, it} = global;
-const {assoc, map, concat, forEach, append} = require('ramda');
-const {
-  rowTodoMapper,
-  todoRowMapper,
-  createTodo
-} = require('../structFactories');
+const {concat} = require('ramda');
+const {createTodo} = require('../structFactories');
 it('can get all todos', async () => {
   const todos = await GetAllTodos();
+  expect(todos).not.toBeNull();
 });
 
 it('can update todos', async () => {

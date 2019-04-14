@@ -8,8 +8,7 @@ const performSave = todos => {
     () => {
       toastr.success('Todos saved');
     },
-    (error) => {
-      debugger;
+    () => {
       toastr.error('Unexpected Error when attempting to save ');
     }
   );

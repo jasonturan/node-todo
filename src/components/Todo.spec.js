@@ -14,7 +14,7 @@ it('renders without crashing', () => {
 
 it('contains a list item', () => {
   const wrapper = shallow(<Todo todo={createTodo('')} />);
-  const x = expect(wrapper.find('input')).toHaveLength(1);
+  expect(wrapper.find('input')).toHaveLength(1);
 });
 
 it('dispatches a toggle todo event when clicked', () => {

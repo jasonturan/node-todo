@@ -5,7 +5,6 @@ import {Dispatch} from '../CoreStore.js';
 import {head} from 'ramda';
 import {VisibilityFilters, ActionTypes} from '../actions';
 import {getDispatchedEventsByName} from '../testHelpers.js';
-import {Button} from 'react-bootstrap';
 
 const {expect} = global;
 it('renders without crashing', () => {

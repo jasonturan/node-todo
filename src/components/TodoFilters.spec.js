@@ -1,7 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import TodoFilters from './TodoFilters.js';
-import VisibilityFilter from './VisibilityFilter';
 
 const {expect} = global;
 
